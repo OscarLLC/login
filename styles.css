@@ -92,8 +92,8 @@ button:hover {
 }
 @media screen and (max-width: 745px) {
   .sub-container {
-    width: 50%;
-    margin-top: -65px;
+    width: 75%;
+    margin-top: -70px;
   }
   .container-confirmar {
     display: block;
