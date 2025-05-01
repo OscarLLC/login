@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="login" content="login ingresa" />
+    <link
+      rel="stylesheet"
+      href="Fontawesome/fontawesome-free-6.7.2-web/css/all.css"
+    />
+    <link rel="stylesheet" href="/assets/icon.avif" />
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="sub-container">
+        <div class="container-imagen">
+          <img
+            class="container-imagen-logo"
+            src="/assets/ima-logo.png"
+            alt="imagen"
+          />
+        </div>
+        <form action="" id="form">
+          <div class="container-datos">
+            <i class="fa-solid fa-envelope"></i>
+            <label for="usuario">EMAIL ID:</label><br />
+            <input
+              type="email"
+              name=""
+              id="usuario"
+              placeholder="usuario"
+              required
+              autocomplete="email"
+            />
+          </div>
+          <div class="container-datos">
+            <i class="fa-solid fa-lock"></i>
+            <label for="password">CONTRASEÑA:</label><br />
+            <input
+              type="password"
+              name=""
+              id="password"
+              placeholder="password"
+              required
+              autocomplete="current-password"
+            />
+          </div>
+          <div class="container-confirmar">
+            <div class="sub-container-confirmar">
+              <input
+                class="confirmar-check"
+                type="checkbox"
+                id="confirmar"
+                name="remember"
+              />
+              <label class="confirmar" for="confirmar">Recordarme</label>
+            </div>
+            <div class="sub-container-confirmar">
+              <a href="">Forgot Password?</a>
+            </div>
+          </div>
+          <div class="container-button">
+            <button type="submit">LOGIN</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="js.js"></script>
+  </body>
+</html>
