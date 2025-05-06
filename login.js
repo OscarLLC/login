@@ -1,29 +1,38 @@
-var usuBd = "oscarlopez88991@gmail.com";
-var passBd = 123;
-let intentos = 0;
-let intentosMaximos = 3;
+let usuBd = "oscarlopez88991@gmail.com";
+let passBd = "123";
+intentos = 0;
+intentosMaximos = 3;
 
-function login(e) {
-  e.preventDefault(); // Evita que el formulario se recargue
+let form = document.getElementById("form");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
+let inputPass = document.getElementById("password");
+let confirmar = document.getElementById("confirmar");
 
-  let usuForm = document.getElementById("usuario").value;
-  let passForm = parseInt(document.getElementById("password").value);
-
-  if (intentos >= intentosMaximos) {
-    alert("Has superado el límite de intentos");
-    return;
+confirmar.addEventListener("change", function () {
+  if (this.checked) {
+    inputPass.type = "text";
+  } else {
+    inputPass.type = "password";
   }
+});
 
-  if (usuBd === usuForm && passBd === passForm) {
-    alert("Bienvenido!");
+function login() {
+  let boton = document.getElementById("boton");
+  let inputUsu = document.getElementById("usuario").value;
+  let passForm = inputPass.value;
+
+  if (usuBd === inputUsu && passBd === passForm) {
     window.location.href = "./home.html";
   } else {
     intentos++;
-    alert("Contraseña incorrecta. Llevas " + intentos + " intento(s).");
+    alert(
+      "Usuario o contraseña incorrecto llevas " + intentos + " Intento (s)"
+    );
   }
-
   if (intentos >= intentosMaximos) {
-    alert("Has superado el límite de intentos. Intenta más tarde.");
-    document.querySelector("button").disabled = true;
+    alert("Has superado el liomite de intentos ");
+    boton.disabled = true;
   }
 }
